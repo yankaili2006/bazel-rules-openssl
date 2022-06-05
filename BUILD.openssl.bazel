@@ -85,7 +85,7 @@ configure_make(
     name = "openssl_default",
     configure_command = "config",
     configure_in_place = True,
-    configure_options = CONFIGURE_OPTIONSselect({
+    configure_options = CONFIGURE_OPTIONS + select({
             "@platforms//os:macos": [
                 "ARFLAGS=r",
             ],
